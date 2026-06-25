@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #1b4d3e;
+  --primary-light: #2d7a5f;
+  --primary-soft: #e8f5f0;
+  --accent: #e8a838;
+  --background: #f7f5f0;
+  --surface: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #6b7280;
+  --success: #22c55e;
+  --pending: #f59e0b;
+  --error: #dc2626;
+  --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.06);
+  --shadow-elevated: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --radius-card: 16px;
+  --radius-button: 12px;
+  --radius-sheet: 24px;
+}
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-primary-soft: var(--primary-soft);
+  --color-accent: var(--accent);
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-success: var(--success);
+  --color-pending: var(--pending);
+  --color-error: var(--error);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-plus-jakarta), system-ui, sans-serif;
+  --font-family-heading: var(--font-plus-jakarta), system-ui, sans-serif;
+  --radius-card: 16px;
+  --radius-button: 12px;
+  --radius-sheet: 24px;
+  --shadow-card: var(--shadow-card);
+  --shadow-elevated: var(--shadow-elevated);
+}
+
+.font-heading {
+  font-family: var(--font-plus-jakarta), system-ui, sans-serif;
+}
+
+.rounded-card {
+  border-radius: var(--radius-card);
+}
+
+.rounded-button {
+  border-radius: var(--radius-button);
+}
+
+.shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+.shadow-elevated {
+  box-shadow: var(--shadow-elevated);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-plus-jakarta), system-ui, sans-serif;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    #eceae4 0%,
+    #f7f5f0 50%,
+    #eceae4 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+}
