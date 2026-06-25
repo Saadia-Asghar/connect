@@ -24,4 +24,4 @@ Port **3010** is used so **3000** stays free for other projects.
 
 ## Team
 
-Saadia Asghar · Fatima Bursam
+Saadia Asghar
